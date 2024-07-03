@@ -45,7 +45,7 @@ const DaftarAkun = () => {
     setTimeout(() => {
       setSuccessMessage(false);
       navigation.navigate('Masuk');
-    }, 2000); // The message will disappear after 2 seconds
+    }, 2000);
   };
 
   return (
@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
     borderColor: Color.colorBlack,
     borderRadius: Border.br_6xs,
     paddingLeft: 10,
-    color: Color.colorBlack, // Ensure the input text is visible
+    color: Color.colorBlack,
   },
   alamatLengkapInput: {
     height: 100,
@@ -222,13 +222,13 @@ const styles = StyleSheet.create({
   successMessage: {
     marginTop: 20,
     fontSize: FontSize.size_md,
-    color: 'green', // Change this to your desired success message color
+    color: 'green',
     textAlign: 'center',
   },
   errorMessage: {
     marginTop: 20,
     fontSize: FontSize.size_md,
-    color: 'red', // Change this to your desired error message color
+    color: 'red',
     textAlign: 'center',
   },
 });
