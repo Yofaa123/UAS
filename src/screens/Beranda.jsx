@@ -1,14 +1,285 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+  TextInput,
+} from 'react-native';
 
-const Beranda = () => {
+const HomeScreen = () => {
   return (
-    <View>
-      <Text>Beranda</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <View style={styles.searchContainer}>
+        <Image source={require('../assets/search.png')} style={styles.icon} />
+        <TextInput
+          style={styles.searchInput}
+          placeholder="Hai kak, mau belanja apa?"
+          placeholderTextColor="#888"
+        />
+      </View>
+      {/* Custom Banner */}
+      <View style={styles.customBannerContainer}>
+        <View style={styles.storeInfo}>
+          <Image
+            source={require('../assets/bishop.png')}
+            style={styles.storeIcon}
+          />
+          <View style={styles.storeDetails}>
+            <Text style={styles.storeName}>Toko Kami</Text>
+            <Text style={styles.storeLocation}>Kota Pamekasan, Jawa Timur</Text>
+            <Text style={styles.storeHours}>Buka jam 05:00 - 17:00</Text>
+          </View>
+        </View>
+        <View style={styles.promotionContainer}>
+          <Text style={styles.promotionText}>
+            100% FREE ONGKIR SELAMANYA* !!!
+          </Text>
+          <View style={styles.separator} />
+          <Text style={styles.promotionNote}>*Untuk jarak 1 KM</Text>
+        </View>
+        <View style={styles.userInfoContainer}>
+          <View style={styles.userInfo}>
+            <Image
+              source={require('../assets/mynauizero.png')}
+              style={styles.userIcon}
+            />
+            <Text style={styles.userInfoText}>Pointku</Text>
+          </View>
+          <View style={styles.userInfo}>
+            <Image
+              source={require('../assets/materialsymbolsperson.png')}
+              style={styles.userIcon}
+            />
+            <Text style={styles.userInfoText}>Yofa</Text>
+          </View>
+        </View>
+      </View>
+
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Produk Terbaru</Text>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <TouchableOpacity style={styles.productCard}>
+            <Image
+              source={require('../assets/beras-1.png')}
+              style={styles.productImage}
+            />
+            <Text style={styles.productName}>Beras Fortune</Text>
+            <Text style={styles.productPrice}>Rp 50.000</Text>
+            <TouchableOpacity style={styles.buyButton}>
+              <Text style={styles.buyButtonText}>Beli</Text>
+            </TouchableOpacity>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.productCard}>
+            <Image
+              source={require('../assets/telur-1.png')}
+              style={styles.productImage}
+            />
+            <Text style={styles.productName}>Telur Ayam</Text>
+            <Text style={styles.productPrice}>Rp 20.000</Text>
+            <TouchableOpacity style={styles.buyButton}>
+              <Text style={styles.buyButtonText}>Beli</Text>
+            </TouchableOpacity>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.productCard}>
+            <Image
+              source={require('../assets/mie-sedap-1.png')}
+              style={styles.productImage}
+            />
+            <Text style={styles.productName}>Mie Sedaap</Text>
+            <Text style={styles.productPrice}>Rp 10.000</Text>
+            <TouchableOpacity style={styles.buyButton}>
+              <Text style={styles.buyButtonText}>Beli</Text>
+            </TouchableOpacity>
+          </TouchableOpacity>
+        </ScrollView>
+      </View>
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Kategori Populer</Text>
+        <View style={styles.categoryContainer}>
+          <TouchableOpacity style={styles.categoryCard}>
+            <Image
+              source={{uri: 'https://via.placeholder.com/100'}}
+              style={styles.categoryImage}
+            />
+            <Text style={styles.categoryName}>Kategori 1</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.categoryCard}>
+            <Image
+              source={{uri: 'https://via.placeholder.com/100'}}
+              style={styles.categoryImage}
+            />
+            <Text style={styles.categoryName}>Kategori 2</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.categoryCard}>
+            <Image
+              source={{uri: 'https://via.placeholder.com/100'}}
+              style={styles.categoryImage}
+            />
+            <Text style={styles.categoryName}>Kategori 3</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </ScrollView>
   );
 };
 
-export default Beranda;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  searchContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#f0f0f0',
+    borderRadius: 10,
+    margin: 20,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+  },
+  icon: {
+    width: 24,
+    height: 24,
+  },
+  searchInput: {
+    marginLeft: 10,
+    flex: 1,
+    fontSize: 16,
+    color: '#000',
+  },
+  customBannerContainer: {
+    padding: 20,
+    backgroundColor: '#fff',
+  },
+  storeInfo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  storeIcon: {
+    width: 50,
+    height: 50,
+  },
+  storeDetails: {
+    marginLeft: 10,
+  },
+  storeName: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#000',
+  },
+  storeLocation: {
+    fontSize: 14,
+    color: '#555',
+  },
+  storeHours: {
+    fontSize: 14,
+    color: '#007BFF',
+  },
+  promotionContainer: {
+    backgroundColor: '#FFFACD',
+    padding: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  promotionText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#000',
+  },
+  separator: {
+    width: '100%',
+    height: 1,
+    backgroundColor: '#000',
+    marginVertical: 5,
+  },
+  promotionNote: {
+    fontSize: 12,
+    color: '#000',
+  },
+  userInfoContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  userInfo: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  userIcon: {
+    width: 30,
+    height: 30,
+  },
+  userInfoText: {
+    marginLeft: 5,
+    fontSize: 14,
+    color: '#000',
+  },
+  section: {
+    marginVertical: 20,
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginLeft: 20,
+    marginBottom: 10,
+    color: '#000',
+  },
+  productCard: {
+    width: 120,
+    marginHorizontal: 10,
+    alignItems: 'center',
+  },
+  productImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 10,
+  },
+  productName: {
+    marginTop: 10,
+    textAlign: 'center',
+    color: '#000',
+  },
+  productPrice: {
+    marginTop: 5,
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#000',
+  },
+  buyButton: {
+    marginTop: 5,
+    backgroundColor: '#007BFF',
+    paddingVertical: 5,
+    paddingHorizontal: 25,
+    borderRadius: 5,
+  },
+  buyButtonText: {
+    color: '#fff',
+    fontSize: 14,
+  },
+  categoryContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    flexWrap: 'wrap',
+  },
+  categoryCard: {
+    width: '30%',
+    marginVertical: 10,
+    alignItems: 'center',
+  },
+  categoryImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 10,
+  },
+  categoryName: {
+    marginTop: 10,
+    textAlign: 'center',
+    color: '#000',
+  },
+});
 
-const styles = StyleSheet.create({});
+export default HomeScreen;

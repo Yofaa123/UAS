@@ -20,6 +20,7 @@ const ResetPassword = () => {
     if (!email) {
       setError('Harap isi email anda');
     } else {
+      // Lakukan tindakan reset password, misalnya navigasi ke halaman lain
       setError('');
       navigation.navigate('Masuk');
     }
@@ -100,7 +101,7 @@ const styles = StyleSheet.create({
   },
   header: {
     width: '100%',
-    height: 45,
+    height: 45, // Tinggi border tetap sama
     backgroundColor: Color.colorMediumslateblue,
     flexDirection: 'row',
     alignItems: 'center',
@@ -114,7 +115,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 0,
     right: 0,
-    bottom: 2,
+    bottom: 2, // Mengatur posisi teks agar lebih ke bawah, tapi tetap di dalam border
   },
   emailLabel: {
     color: Color.colorBlack,
@@ -191,7 +192,7 @@ const styles = StyleSheet.create({
     height: 28,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: -19,
+    marginBottom: -19, // Mengatur posisi ikon agar lebih ke bawah, tapi tetap di dalam border
   },
   resetPassword: {
     backgroundColor: Color.colorWhite,
