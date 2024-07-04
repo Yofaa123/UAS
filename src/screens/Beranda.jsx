@@ -78,7 +78,7 @@ const HomeScreen = () => {
               style={styles.productImage}
             />
             <Text style={styles.productName}>Telur Ayam</Text>
-            <Text style={styles.productPrice}>Rp 20.000</Text>
+            <Text style={styles.productPrice}>Rp 26.000</Text>
             <TouchableOpacity style={styles.buyButton}>
               <Text style={styles.buyButtonText}>Beli</Text>
             </TouchableOpacity>
@@ -89,6 +89,28 @@ const HomeScreen = () => {
               style={styles.productImage}
             />
             <Text style={styles.productName}>Mie Sedaap</Text>
+            <Text style={styles.productPrice}>Rp 2.500</Text>
+            <TouchableOpacity style={styles.buyButton}>
+              <Text style={styles.buyButtonText}>Beli</Text>
+            </TouchableOpacity>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.productCard}>
+            <Image
+              source={require('../assets/soklin-1.png')}
+              style={styles.productImage}
+            />
+            <Text style={styles.productName}>Soklin</Text>
+            <Text style={styles.productPrice}>Rp 5.000</Text>
+            <TouchableOpacity style={styles.buyButton}>
+              <Text style={styles.buyButtonText}>Beli</Text>
+            </TouchableOpacity>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.productCard}>
+            <Image
+              source={require('../assets/kecap-1.png')}
+              style={styles.productImage}
+            />
+            <Text style={styles.productName}>Kecap</Text>
             <Text style={styles.productPrice}>Rp 10.000</Text>
             <TouchableOpacity style={styles.buyButton}>
               <Text style={styles.buyButtonText}>Beli</Text>
@@ -101,24 +123,45 @@ const HomeScreen = () => {
         <View style={styles.categoryContainer}>
           <TouchableOpacity style={styles.categoryCard}>
             <Image
-              source={{uri: 'https://via.placeholder.com/100'}}
+              source={require('../assets/sembako-1.png')}
               style={styles.categoryImage}
             />
-            <Text style={styles.categoryName}>Kategori 1</Text>
+            <Text style={styles.categoryName}>Sembako</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.categoryCard}>
             <Image
-              source={{uri: 'https://via.placeholder.com/100'}}
+              source={require('../assets/bumbu-1.png')}
               style={styles.categoryImage}
             />
-            <Text style={styles.categoryName}>Kategori 2</Text>
+            <Text style={styles.categoryName}>Bumbu Dapur</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.categoryCard}>
             <Image
-              source={{uri: 'https://via.placeholder.com/100'}}
+              source={require('../assets/daging-1.png')}
               style={styles.categoryImage}
             />
-            <Text style={styles.categoryName}>Kategori 3</Text>
+            <Text style={styles.categoryName}>Daging-Ikan</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.categoryCard}>
+            <Image
+              source={require('../assets/images-1.png')}
+              style={styles.categoryImage}
+            />
+            <Text style={styles.categoryName}>Snak & Roti</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.categoryCard}>
+            <Image
+              source={require('../assets/minuman-1.png')}
+              style={styles.categoryImage}
+            />
+            <Text style={styles.categoryName}>Minuman</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.categoryCard}>
+            <Image
+              source={require('../assets/kardus-1.png')}
+              style={styles.categoryImage}
+            />
+            <Text style={styles.categoryName}>Lainnya</Text>
           </TouchableOpacity>
         </View>
       </View>
