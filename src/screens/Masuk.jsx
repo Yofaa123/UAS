@@ -26,7 +26,7 @@ const Masuk = () => {
     }
 
     setErrorMessage('');
-    navigation.navigate('Beranda');
+    navigation.navigate('MenuTab', {screen: 'Beranda'});
   };
 
   return (

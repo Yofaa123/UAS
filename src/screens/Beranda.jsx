@@ -9,16 +9,18 @@ import {
   TextInput,
 } from 'react-native';
 
-const HomeScreen = () => {
+const Beranda = () => {
   return (
     <ScrollView style={styles.container}>
-      <View style={styles.searchContainer}>
-        <Image source={require('../assets/search.png')} style={styles.icon} />
-        <TextInput
-          style={styles.searchInput}
-          placeholder="Hai kak, mau belanja apa?"
-          placeholderTextColor="#888"
-        />
+      <View style={styles.table}>
+        <View style={styles.searchContainer}>
+          <Image source={require('../assets/search.png')} style={styles.icon} />
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Hai kak, mau belanja apa?"
+            placeholderTextColor="#888"
+          />
+        </View>
       </View>
       {/* Custom Banner */}
       <View style={styles.customBannerContainer}>
@@ -40,7 +42,7 @@ const HomeScreen = () => {
           <View style={styles.separator} />
           <Text style={styles.promotionNote}>*Untuk jarak 1 KM</Text>
         </View>
-        <View style={styles.userInfoContainer}>
+        <View style={styles.userInfoTable}>
           <View style={styles.userInfo}>
             <Image
               source={require('../assets/mynauizero.png')}
@@ -174,14 +176,19 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  table: {
+    backgroundColor: '#007BFF',
+    padding: 2,
+  },
   searchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#f0f0f0',
     borderRadius: 10,
-    margin: 20,
+    margin: 15,
     paddingHorizontal: 10,
-    paddingVertical: 8,
+    borderWidth: 1,
+    borderColor: '#007BFF',
   },
   icon: {
     width: 24,
@@ -201,6 +208,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 20,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 10,
   },
   storeIcon: {
     width: 50,
@@ -244,9 +255,20 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#000',
   },
-  userInfoContainer: {
+  userInfoTable: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 5,
   },
   userInfo: {
     flexDirection: 'row',
@@ -325,4 +347,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default Beranda;
