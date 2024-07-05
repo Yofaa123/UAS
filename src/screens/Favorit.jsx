@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   header: {
-    backgroundColor: '#D81B60',
+    backgroundColor: '#007BFF',
     padding: 20,
   },
   headerText: {
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   emptyTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#D81B60',
+    color: '#007BFF',
   },
   emptySubtitle: {
     fontSize: 16,
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   shopButton: {
-    backgroundColor: '#D81B60',
+    backgroundColor: '#007BFF',
     paddingVertical: 10,
     paddingHorizontal: 30,
     borderRadius: 5,
